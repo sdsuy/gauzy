@@ -81,6 +81,20 @@ You can run seed any moment manually (e.g. if you changed entities schemas) with
 
 Note: it's WIP, currently supports AWS EKS (Kubernetes) and Fargate Clusters (for web app and backend api), Application Load Balancers and AWS RDS Serverless PostgreSQL DB deployments.
 
+### History of adding electon app
+
+yarn add --dev -W @nstudio/xplat
+
+ng generate app
+? What name would you like for this app? desktop
+? What type of app would like to create? electron [Electron app]
+? Would you like to configure routing for this app? Yes
+? Which frontend framework should it use? angular [Angular app]
+? Use xplat supporting architecture? No
+
+? What's the name of the web app in your workspace you'd like to use inside Electron? gauzy
+? In which directory should the app be generated?
+
 ## Technology Stack
 
 -   [TypeScript](https://www.typescriptlang.org)
