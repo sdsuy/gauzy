@@ -143,7 +143,6 @@
 		"bcrypt": "^4.0.1",
 		"bootstrap": "^4.3.1",
 		"chart.js": "^2.9.3",
-		"pm2": "^4.2.3",
 		"chart.piecelabel.js": "^0.15.0",
 		"ckeditor": "^4.12.0",
 		"ckeditor4-angular": "^1.0.1",
@@ -193,6 +192,7 @@
 		"nodemailer-handlebars": "^1.0.0",
 		"normalize.css": "^8.0.1",
 		"pace-js": "^1.0.2",
+		"pm2": "^4.2.3",
 		"pug": "^2.0.4",
 		"reflect-metadata": "^0.1.13",
 		"roboto-fontface": "^0.10.0",
@@ -274,6 +274,7 @@
 		"lint-staged": "^9.2.1",
 		"ng-packagr": "^5.5.0",
 		"npm-run-all": "^4.1.5",
+		"nx-electron": "^9.0.0-beta.4",
 		"prettier": "^1.18.2",
 		"prettier-tslint": "^0.4.2",
 		"pretty-quick": "^1.10.0",
@@ -292,7 +293,13 @@
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-language-service": "^0.9.9",
 		"typescript": "~3.5.3",
-		"webpack-bundle-analyzer": "^3.4.1"
+		"webpack-bundle-analyzer": "^3.4.1",
+		"electron": "^7.1.0",
+		"@nrwl/eslint-plugin-nx": "8.12.11",
+		"@typescript-eslint/parser": "2.3.2",
+		"@typescript-eslint/eslint-plugin": "2.3.2",
+		"eslint": "6.1.0",
+		"eslint-config-prettier": "6.0.0"
 	},
 	"engines": {
 		"node": ">=10.15.0",

@@ -272,6 +272,78 @@
 					}
 				}
 			}
+		},
+		"desktop": {
+			"root": "apps/desktop",
+			"sourceRoot": "apps/desktop/src",
+			"projectType": "application",
+			"prefix": "desktop",
+			"schematics": {},
+			"architect": {
+				"build": {
+					"builder": "nx-electron:build",
+					"options": {
+						"outputPath": "dist/apps/desktop",
+						"main": "apps/desktop/src/main.ts",
+						"tsConfig": "apps/desktop/tsconfig.app.json",
+						"assets": ["apps/desktop/src/assets"]
+					},
+					"configurations": {
+						"production": {
+							"optimization": true,
+							"extractLicenses": true,
+							"inspect": false,
+							"fileReplacements": [
+								{
+									"replace": "apps/desktop/src/environments/environment.ts",
+									"with": "apps/desktop/src/environments/environment.prod.ts"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "nx-electron:execute",
+					"options": {
+						"buildTarget": "desktop:build"
+					}
+				},
+				"package": {
+					"builder": "nx-electron:package",
+					"options": {
+						"name": "desktop",
+						"frontendProject": "gauzy",
+						"out": "dist/packages"
+					}
+				},
+				"make": {
+					"builder": "nx-electron:make",
+					"options": {
+						"name": "desktop",
+						"frontendProject": "gauzy",
+						"out": "dist/executables"
+					}
+				},
+				"lint": {
+					"builder": "@nrwl/linter:lint",
+					"options": {
+						"linter": "eslint",
+						"config": "apps/desktop/.eslintrc",
+						"tsConfig": [
+							"apps/desktop/tsconfig.app.json",
+							"apps/desktop/tsconfig.spec.json"
+						],
+						"exclude": ["**/node_modules/**", "!apps/desktop/**"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "apps/desktop/jest.config.js",
+						"tsConfig": "apps/desktop/tsconfig.spec.json"
+					}
+				}
+			}
 		}
 	},
 	"schematics": {

@@ -40,7 +40,7 @@ Feel free to test a Demo <http://demo.gauzy.co:4250> on our server. Login: `admi
 
 In the future we will have the following:
 
--   Gauzy Platform SaaS at <https://app.gauzy.co> 
+-   Gauzy Platform SaaS at <https://app.gauzy.co>
 -   Gauzy Platform Demo at <https://demo.gauzy.co> (login `admin@ever.co` and password: `admin`)
 -   Gauzy Platform Dev builds (using CI/CD, from the `develop` branch) at <https://app.gauzy.dev>
 
@@ -82,6 +82,12 @@ You can run seed any moment manually (e.g. if you changed entities schemas) with
 -   Check [Gauzy Pulumi](https://github.com/ever-co/gauzy-pulumi) project, it will make Clouds deployments possible with a single command (`pulumi up`)
 
 Note: it's WIP, currently supports AWS EKS (Kubernetes) and Fargate Clusters (for web app and backend api), Application Load Balancers and AWS RDS Serverless PostgreSQL DB deployments.
+
+## Electron
+
+https://github.com/bennymeg/nx-electron
+yarn add --dev nx-electron
+nx g nx-electron:app desktop --frontendProject=gauzy
 
 ## Technology Stack
 
