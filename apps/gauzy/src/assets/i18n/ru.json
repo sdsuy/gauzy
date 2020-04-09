@@ -229,6 +229,7 @@
 		},
 		"RATES": {
 			"DEFAULT_RATE": "Стандартная ставка",
+			"EXPECTED_RATE": "Ожидаемый курс",
 			"LIMITS": "Лимиты"
 		},
 		"CHECKBOXES": {
@@ -499,7 +500,7 @@
 			"ACCOUNT": "Аккаунт",
 			"EMPLOYMENT": "Занятость",
 			"LOCATION": "Местоположение",
-			"RATE": "Ставка",
+			"RATE": "Тарифы",
 			"HIRING": "Hiring",
 			"EXPERIENCE": "Опыт работы",
 			"TASKS": "Задачи",
@@ -573,6 +574,8 @@
 			"SETTINGS": {
 				"TIMER_SETTINGS": "Настройки таймера",
 				"ALLOW_MODIFY_TIME": "Разрешить изменять время",
+				"ALLOW_DELETE_TIME": "Разрешить удаление времени",
+				"ALLOW_MANUAL_TIME": "Разрешить ручное время",
 				"REQUIRE_REASON": "Требуется причина",
 				"REQUIRE_DESCRIPTION": "Требуется описание",
 				"REQUIRE_PROJECT": "Требовать проект",
@@ -1013,6 +1016,7 @@
 		"START_TIMER": "Запустить таймер",
 		"TIMER": "Таймер",
 		"MANUAL": "Ручной",
+		"MANUAL_NOT_ALLOW": "Ручное время не разрешено",
 		"SELECT_PROJECT": "Выбрать проект",
 		"SELECT_TASK": "Выберите задачу",
 		"DATE": "Дата",
