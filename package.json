@@ -225,6 +225,7 @@
 		"@nrwl/nest": "^8.4.13",
 		"@nrwl/node": "^8.4.13",
 		"@nrwl/workspace": "^8.4.13",
+		"@nstudio/xplat": "^9.0.2",
 		"@semantic-release/changelog": "^3.0.4",
 		"@semantic-release/git": "^7.0.16",
 		"@semantic-release/github": "^5.4.3",
