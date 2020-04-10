@@ -42,6 +42,15 @@ export class OrganizationTeamsService extends CrudService<OrganizationTeams> {
 
 		organizationTeam.members = employees;
 
+		const managers = await this.employeeRepository.findByIds(
+			entity.managers,
+			{
+				relations: ['user']
+			}
+		);
+
+		organizationTeam.managers = managers;
+
 		return this.organizationTeamsRepository.save(organizationTeam);
 	}
 
@@ -63,6 +72,15 @@ export class OrganizationTeamsService extends CrudService<OrganizationTeams> {
 			);
 
 			organizationTeam.members = employees;
+
+			const managers = await this.employeeRepository.findByIds(
+				entity.managers,
+				{
+					relations: ['user']
+				}
+			);
+
+			organizationTeam.managers = managers;
 
 			return this.organizationTeamsRepository.save(organizationTeam);
 		} catch (err /*: WriteError*/) {

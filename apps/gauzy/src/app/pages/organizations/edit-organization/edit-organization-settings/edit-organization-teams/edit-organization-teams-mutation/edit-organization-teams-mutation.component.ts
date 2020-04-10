@@ -20,6 +20,7 @@ export class EditOrganizationTeamsMutationComponent implements OnInit {
 	addOrEditTeam = new EventEmitter();
 
 	members: string[];
+	managers: string[];
 	name: string;
 	selectedEmployees: string[];
 
@@ -35,11 +36,16 @@ export class EditOrganizationTeamsMutationComponent implements OnInit {
 	addOrEditTeams() {
 		this.addOrEditTeam.emit({
 			name: this.name,
+			managers: this.managers || this.selectedEmployees,
 			members: this.members || this.selectedEmployees,
 			organizationId: this.organizationId
 		});
 
 		this.name = '';
+	}
+
+	onManagersSelected(managers: string[]) {
+		this.managers = managers;
 	}
 
 	onMembersSelected(members: string[]) {

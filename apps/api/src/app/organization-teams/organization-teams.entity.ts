@@ -25,4 +25,10 @@ export class OrganizationTeams extends Base implements IOrganizationTeams {
 		name: 'organization_team_employee'
 	})
 	members?: Employee[];
+
+	@ManyToMany((type) => Employee, { cascade: ['update'] })
+	@JoinTable({
+		name: 'organization_team_employee'
+	})
+	managers?: Employee[];
 }

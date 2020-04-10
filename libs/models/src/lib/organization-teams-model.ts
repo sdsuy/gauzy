@@ -16,4 +16,5 @@ export interface OrganizationTeamCreateInput {
 	name: string;
 	organizationId: string;
 	members?: string[];
+	managers?: string[];
 }
