@@ -123,6 +123,7 @@ export class EditOrganizationClientsComponent extends TranslationBaseComponent
 		);
 		if (res) {
 			this.clients = res.items;
+			console.log('this.clients', this.clients);
 		}
 	}
 

@@ -49,6 +49,7 @@ import { HubstaffModule } from './hubstaff/hubstaff.module';
 import { CandidateModule } from './candidate/candidate.module';
 import { IntegrationSettingModule } from './integration-setting/integration-setting.module';
 import { IntegrationModule } from './integration/integration.module';
+import { CandidateCVModule } from './candidate_cv/candidate_cv.module';
 
 @Module({
 	imports: [
@@ -183,6 +184,7 @@ import { IntegrationModule } from './integration/integration.module';
 				]
 			}
 		]),
+		CandidateCVModule,
 		CoreModule,
 		AuthModule,
 		UserModule,

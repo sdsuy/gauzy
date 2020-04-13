@@ -11,9 +11,9 @@ export interface Candidate extends IBaseEntityModel, ILocation {
 	user: User;
 	userId: string;
 	organization: Organization;
-	orgId: string;
+	orgId?: string;
 	status?: Status;
-	teams?: OrganizationTeams[];
+	// teams?: OrganizationTeams[];
 	tenant: ITenant;
 	organizationDepartments?: OrganizationDepartment[];
 	organizationPosition?: OrganizationPositions;
@@ -30,6 +30,7 @@ export interface Candidate extends IBaseEntityModel, ILocation {
 	billRateValue?: number;
 	billRateCurrency?: string;
 	reWeeklyLimit?: number;
+	source?: string;
 }
 
 export type Status = 'applied' | 'rejected' | 'hired';

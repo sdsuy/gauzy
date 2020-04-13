@@ -40,8 +40,8 @@ export class OrganizationController extends CrudController<Organization> {
 		status: HttpStatus.NOT_FOUND,
 		description: 'Record not found'
 	})
-	@UseGuards(PermissionGuard)
-	@Permissions(PermissionsEnum.ALL_ORG_VIEW)
+	// @UseGuards(PermissionGuard)
+	// @Permissions(PermissionsEnum.ALL_ORG_VIEW)
 	@Get()
 	async findAll(): Promise<IPagination<Organization>> {
 		return this.organizationService.findAll();

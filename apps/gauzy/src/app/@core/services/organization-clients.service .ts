@@ -37,7 +37,7 @@ export class OrganizationClientsService {
 		findInput?: OrganizationClientsFindInput
 	): Promise<{ items: any[]; total: number }> {
 		const data = JSON.stringify({ relations, findInput });
-
+		console.log('data', data);
 		return this.http
 			.get<{ items: OrganizationClients[]; total: number }>(
 				`/api/organization-clients`,

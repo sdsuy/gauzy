@@ -177,6 +177,7 @@
 			"ADD_DEPARTMENT": "Add Department",
 			"ADD_POSITION": "Add position",
 			"ADD_VENDOR": "Add vendor",
+			"DOCUMENT_NAME": "Document name",
 			"ADD_EXPENSE_CATEGORY": "Add expense category",
 			"CLIENTS": "Clients",
 			"START_DATE_PROJECT": "Project Start Date (optional)",
@@ -892,6 +893,7 @@
 			"NEW_ORGANIZATION_PROJECT_INVALID_NAME": "Invalid input",
 			"NEW_ORGANIZATION_TEAM_INVALID_NAME": "Team name and members are required",
 			"NEW_ORGANIZATION_VENDOR_INVALID_NAME": "Vendor name is required",
+			"NEW_ORGANIZATION_CV_INVALID_NAME": "CV name is required",
 			"NEW_ORGANIZATION_POSITION_INVALID_NAME": "Position name is required",
 			"NEW_ORGANIZATION_EMPLOYEE_LEVEL_INVALID_NAME": "Employee Level is required",
 			"NEW_ORGANIZATION_INVALID_EMPLOYMENT_TYPE": "Employment type name is required",
@@ -972,6 +974,11 @@
 				"ADD_VENDOR": "New vendor {{ name }} successfully added!",
 				"REMOVE_VENDOR": "Vendor {{ name }} successfully removed!",
 				"INVALID_VENDOR_NAME": "Please add a Vendor name"
+			},
+			"EDIT_ORGANIZATIONS_CV": {
+				"ADD_CV": "New CV {{ name }} successfully added!",
+				"REMOVE_CV": "CV {{ name }} successfully removed!",
+				"INVALID_CV_NAME": "Please add a CV name"
 			},
 			"EDIT_ORGANIZATIONS_EXPENSE_CATEGORIES": {
 				"ADD_EXPENSE_CATEGORY": "New Category {{ name }} successfully added!",

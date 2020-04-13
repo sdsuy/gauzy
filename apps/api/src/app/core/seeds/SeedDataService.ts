@@ -70,6 +70,8 @@ import { createCandidateSourses } from '../../candidate_source/candidate_source.
 import { CandidateSource } from '../../candidate_source/candidate_source.entity';
 import { Tag } from './../../tags/tag.entity';
 import { Tenant } from './../../tenant/tenant.entity';
+import { CandidateCv } from '../../candidate_cv/candidate_cv.entity';
+import { createCandidateCVs } from '../../candidate_cv/candidate_cv.seed';
 
 const allEntities = [
 	TimeOffPolicy,
@@ -110,7 +112,7 @@ const allEntities = [
 	OrganizationEmploymentType,
 	Equipment,
 	EmployeeLevel,
-	CandidateSource
+	CandidateCv
 ];
 
 @Injectable()
@@ -173,7 +175,11 @@ export class SeedDataService {
 					} DATABASE...`
 				)
 			);
+
 			const tenants = await createTenants(this.connection);
+			const cvs: CandidateCv[] = await createCandidateCVs(
+				this.connection
+			);
 			const sourses: CandidateSource[] = await createCandidateSourses(
 				this.connection
 			);
@@ -210,6 +216,7 @@ export class SeedDataService {
 					users: [...defaultCandidateUser]
 				},
 				{
+					cvs: cvs,
 					source: sourses,
 					org: defaultOrganization,
 					orgs: randomOrganizations,

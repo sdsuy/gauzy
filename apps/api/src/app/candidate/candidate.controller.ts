@@ -26,7 +26,7 @@ import { CommandBus } from '@nestjs/cqrs';
 import { CandidateCreateCommand, CandidateBulkCreateCommand } from './commands';
 
 @ApiTags('Candidate')
-@UseGuards(AuthGuard('jwt'))
+// @UseGuards(AuthGuard('jwt'))
 @Controller()
 export class CandidateController extends CrudController<Candidate> {
 	constructor(

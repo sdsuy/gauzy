@@ -49,6 +49,7 @@ import { EditCandidateHiringComponent } from './edit-candidate/edit-candidate-pr
 import { EditCandidateRatesComponent } from './edit-candidate/edit-candidate-profile/edit-candidate-rates/edit-candidate-rates.component';
 import { EmployeeLocationModule } from '../../@shared/employee/employee-location/employee-location.module';
 import { EmployeeRatesModule } from '../../@shared/employee/employee-rates/employee-rates.module';
+import { FileUploaderModule } from '../../@shared/file-uploader-input/file-uploader-input.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -106,7 +107,8 @@ const COMPONENTS = [
 		InviteMutationModule,
 		InviteTableModule,
 		EmployeeLocationModule,
-		EmployeeRatesModule
+		EmployeeRatesModule,
+		FileUploaderModule
 	],
 	declarations: [...COMPONENTS],
 	entryComponents: [

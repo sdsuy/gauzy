@@ -1,3 +1,5 @@
+import { CandidateCv } from './../candidate_cv/candidate_cv.entity';
+import { DefaultUser } from './../../../../../libs/models/src/lib/default-user.model';
 import { Connection } from 'typeorm';
 import { Candidate } from './candidate.entity';
 import { Organization } from '../organization/organization.entity';
@@ -13,6 +15,7 @@ export const createCandidates = async (
 		users: User[];
 	},
 	randomData?: {
+		cvs: CandidateCv[];
 		source: CandidateSource[];
 		org: Organization;
 		orgs: Organization[];
@@ -64,6 +67,7 @@ const createDefaultCandidates = async (
 const createRandomCandidates = async (
 	connection: Connection,
 	randomData: {
+		// cvs: CandidateCv[];
 		source: CandidateSource[];
 		org: Organization;
 		orgs: Organization[];
@@ -74,6 +78,7 @@ const createRandomCandidates = async (
 	let candidate: Candidate;
 	const candidates: Candidate[] = [];
 	const randomUsers = randomData.users;
+	// const cv = randomData.cvs
 	const randomOrgs = randomData.orgs;
 	const organization = randomData.org;
 	const candidate_source = randomData.source;
@@ -83,14 +88,17 @@ const createRandomCandidates = async (
 		quantity: number,
 		organization: Organization
 	) => {
+		let counter = 0;
 		for (let index = 0; index < quantity; index++) {
 			candidate = new Candidate();
 			candidate.organization = organization;
+			// candidate.cv = cv[co];
 			candidate.source = candidate_source[0].id;
 			candidate.user = randomUsers.pop();
 			if (candidate.user) {
 				await insertCandidate(connection, candidate);
 				candidates.push(candidate);
+				counter++;
 			}
 		}
 	};
