@@ -20,6 +20,10 @@ export const createTeams = async (
 			(e) => (teams[i].defaultMembers || []).indexOf(e.user.email) > -1
 		);
 
+		team.managers = employees.filter(
+			(e) => (teams[i].defaultMembers || []).indexOf(e.user.email) > -1
+		);
+
 		insertOrganizationTeam(connection, team);
 		organizationTeams.push(team);
 	}

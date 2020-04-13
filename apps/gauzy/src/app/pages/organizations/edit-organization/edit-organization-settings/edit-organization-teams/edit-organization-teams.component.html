@@ -35,8 +35,27 @@
 				</div>
 			</nb-card-header>
 
+			<nb-card-body class="team-card" *ngIf="team.managers">
+				<div>
+					{{ 'FORM.PLACEHOLDERS.TEAM_MANAGERS' | translate }}
+					<div
+						class="name-container"
+						*ngFor="let manager of team.managers"
+					>
+						<div class="image-container">
+							<img [src]="manager.user.imageUrl" />
+						</div>
+						<span
+							>{{ manager.user.firstName }}
+							{{ manager.user.lastName }}
+						</span>
+					</div>
+				</div>
+			</nb-card-body>
+
 			<nb-card-body class="team-card" *ngIf="team.members">
 				<div>
+					{{ 'FORM.PLACEHOLDERS.TEAM_MEMBERS' | translate }}
 					<div
 						class="name-container"
 						*ngFor="let member of team.members"

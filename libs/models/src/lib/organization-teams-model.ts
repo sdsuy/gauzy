@@ -5,6 +5,7 @@ export interface OrganizationTeams extends IBaseEntityModel {
 	name: string;
 	organizationId: string;
 	members?: Employee[];
+	managers?: Employee[];
 }
 
 export interface OrganizationTeamFindInput extends IBaseEntityModel {
