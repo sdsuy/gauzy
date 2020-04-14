@@ -99,6 +99,10 @@ export class OrganizationTeamsService extends CrudService<OrganizationTeams> {
 			for (const emp of orgTeams.members) {
 				emp.user = await this.userRepository.findOne(emp.userId);
 			}
+
+			for (const emp of orgTeams.managers) {
+				emp.user = await this.userRepository.findOne(emp.userId);
+			}
 		}
 
 		return { items, total };

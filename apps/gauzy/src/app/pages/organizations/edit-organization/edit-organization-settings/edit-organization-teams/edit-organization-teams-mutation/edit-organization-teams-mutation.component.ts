@@ -29,6 +29,9 @@ export class EditOrganizationTeamsMutationComponent implements OnInit {
 			this.selectedEmployees = this.team.members.map(
 				(member) => member.id
 			);
+			this.selectedEmployees = this.team.managers.map(
+				(manager) => manager.id
+			);
 			this.name = this.team.name;
 		}
 	}
