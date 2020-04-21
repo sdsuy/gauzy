@@ -32,6 +32,7 @@ import { OrganizationPositionsService } from '../organization-positions/organiza
 import { OrganizationProjectsService } from '../organization-projects/organization-projects.service';
 import { OrganizationRecurringExpenseService } from '../organization-recurring-expense/organization-recurring-expense.service';
 import { OrganizationTeamsService } from '../organization-teams/organization-teams.service';
+import { OrganizationTeamsEmployeeService } from '../organization-teams-employee/organization-teams-employee.service';
 import { OrganizationVendorsService } from '../organization-vendors/organization-vendors.service';
 import { ProposalService } from '../proposal/proposal.service';
 import { RoleService } from '../role/role.service';
@@ -114,6 +115,10 @@ export class ExportAllService implements OnDestroy {
 			nameFile: 'organization_team'
 		},
 		{
+			service: this.organizationTeamsEmployeeService,
+			nameFile: 'organization_team_employee'
+		},
+		{
 			service: this.organizationVendorsService,
 			nameFile: 'organization_vendor'
 		},
@@ -157,6 +162,7 @@ export class ExportAllService implements OnDestroy {
 		private organizationProjectsService: OrganizationProjectsService,
 		private organizationRecurringExpenseService: OrganizationRecurringExpenseService,
 		private organizationTeamsService: OrganizationTeamsService,
+		private organizationTeamsEmployeeService: OrganizationTeamsEmployeeService,
 		private organizationVendorsService: OrganizationVendorsService,
 		private proposalService: ProposalService,
 		private roleService: RoleService,

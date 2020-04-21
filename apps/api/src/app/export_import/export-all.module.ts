@@ -55,7 +55,9 @@ import { OrganizationPositionsService } from '../organization-positions/organiza
 import { OrganizationRecurringExpense } from '../organization-recurring-expense/organization-recurring-expense.entity';
 import { OrganizationRecurringExpenseService } from '../organization-recurring-expense/organization-recurring-expense.service';
 import { OrganizationTeams } from '../organization-teams/organization-teams.entity';
+import { OrganizationTeamsEmployee } from '../organization-teams-employee/organization-teams-employee.entity';
 import { OrganizationTeamsService } from '../organization-teams/organization-teams.service';
+import { OrganizationTeamsEmployeeService } from '../organization-teams-employee/organization-teams-employee.service';
 import { OrganizationVendor } from '../organization-vendors/organization-vendors.entity';
 import { OrganizationVendorsService } from '../organization-vendors/organization-vendors.service';
 import { Proposal } from '../proposal/proposal.entity';
@@ -111,6 +113,7 @@ import { TimeLogService } from '../timesheet/time-log/time-log.service';
 			OrganizationPositions,
 			OrganizationRecurringExpense,
 			OrganizationTeams,
+			OrganizationTeamsEmployee,
 			OrganizationVendor,
 			Proposal,
 			RolePermissions,
@@ -153,6 +156,7 @@ import { TimeLogService } from '../timesheet/time-log/time-log.service';
 		OrganizationProjectsService,
 		OrganizationRecurringExpenseService,
 		OrganizationTeamsService,
+		OrganizationTeamsEmployeeService,
 		OrganizationVendorsService,
 		ProposalService,
 		RoleService,
@@ -194,6 +198,7 @@ import { TimeLogService } from '../timesheet/time-log/time-log.service';
 		OrganizationProjectsService,
 		OrganizationRecurringExpenseService,
 		OrganizationTeamsService,
+		OrganizationTeamsEmployeeService,
 		OrganizationVendorsService,
 		ProposalService,
 		RoleService,
