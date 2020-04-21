@@ -29,6 +29,7 @@ import { createUsersOrganizations } from '../../user-organization/user-organizat
 import { UserOrganization } from '../../user-organization/user-organization.entity';
 import { createCountries } from '../../country/country.seed';
 import { OrganizationTeams } from '../../organization-teams/organization-teams.entity';
+import { OrganizationTeamsEmployee } from '../../organization-teams-employee/organization-teams-employee.entity';
 import { Country } from '../../country';
 import { createTeams } from '../../organization-teams/organization-teams.seed';
 import { RolePermissions } from '../../role-permissions/role-permissions.entity';
@@ -90,6 +91,7 @@ const allEntities = [
 	Expense,
 	EmployeeSetting,
 	OrganizationTeams,
+	OrganizationTeamsEmployee,
 	OrganizationClients,
 	OrganizationVendor,
 	OrganizationDepartment,

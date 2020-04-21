@@ -14,13 +14,13 @@ export class OrganizationTeamsEmployee extends Base
 	@IsString()
 	@IsNotEmpty()
 	@Column()
-	public organizationTeamId!: string;
+	organizationTeamId!: string;
 
 	@ApiProperty({ type: String })
 	@IsString()
 	@IsNotEmpty()
 	@Column()
-	public employeeId!: string;
+	employeeId!: string;
 
 	@ManyToOne(
 		(type) => OrganizationTeams,
@@ -30,7 +30,7 @@ export class OrganizationTeamsEmployee extends Base
 		}
 	)
 	@JoinColumn({ name: 'organizationTeamId' })
-	public organizationTeams!: OrganizationTeams;
+	organizationTeams!: OrganizationTeams;
 
 	@ManyToOne(
 		(type) => Employee,
@@ -39,7 +39,7 @@ export class OrganizationTeamsEmployee extends Base
 			cascade: true
 		}
 	)
-	public employee!: Employee;
+	employee!: Employee;
 
 	@ApiProperty({ type: String })
 	@IsString()

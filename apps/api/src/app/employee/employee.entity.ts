@@ -13,7 +13,8 @@ import {
 	ManyToMany,
 	ManyToOne,
 	OneToOne,
-	RelationId
+	RelationId,
+	OneToMany
 } from 'typeorm';
 import { LocationBase } from '../core/entities/location-base';
 import { Organization } from '../organization/organization.entity';
@@ -24,6 +25,7 @@ import { OrganizationTeams } from '../organization-teams/organization-teams.enti
 import { Tag } from '../tags/tag.entity';
 import { Tenant } from '../tenant/tenant.entity';
 import { User } from '../user/user.entity';
+import { OrganizationTeamsEmployee } from '../organization-teams-employee/organization-teams-employee.entity';
 
 @Entity('employee')
 export class Employee extends LocationBase implements IEmployee {
@@ -120,10 +122,14 @@ export class Employee extends LocationBase implements IEmployee {
 	@Column({ nullable: true })
 	reWeeklyLimit?: number;
 
-	@ManyToMany((type) => OrganizationTeams) // , orgTeams => orgTeams.members
-	@JoinTable({
-		name: 'organization_team_employee'
-	})
+	// @ManyToMany((type) => OrganizationTeams) // , orgTeams => orgTeams.members
+	// @JoinTable({
+	// 	name: 'organization_team_employee'
+	// })
+	@OneToMany(
+		(type) => OrganizationTeamsEmployee,
+		(organizationTeamsEmployee) => organizationTeamsEmployee.employee
+	)
 	teams?: OrganizationTeams[];
 
 	@ApiPropertyOptional({ type: Date })
