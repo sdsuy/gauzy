@@ -78,11 +78,17 @@ export class OrganizationTeamsService extends CrudService<OrganizationTeams> {
 		const items = await this.organizationTeamsRepository.find(filter);
 
 		for (const orgTeams of items) {
-			for (const emp of orgTeams.members) {
-				emp.user = await this.userRepository.findOne(emp.userId);
-			}
-		}
+			const emps: Employee[] = [];
 
+			for (const teamEmp of orgTeams.teamsEmployee) {
+				const emp = await this.employeeRepository.findOne(
+					teamEmp.employeeId
+				);
+				emp.user = await this.userRepository.findOne(emp.userId);
+				emps.push(emp);
+			}
+			orgTeams.members = emps;
+		}
 		return { items, total };
 	}
 }
