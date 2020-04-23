@@ -126,11 +126,13 @@ export class Employee extends LocationBase implements IEmployee {
 	// @JoinTable({
 	// 	name: 'organization_team_employee'
 	// })
+	teams?: OrganizationTeams[];
+
 	@OneToMany(
 		(type) => OrganizationTeamsEmployee,
 		(organizationTeamsEmployee) => organizationTeamsEmployee.employee
 	)
-	teams?: OrganizationTeams[];
+	teamsEmployee?: OrganizationTeamsEmployee[];
 
 	@ApiPropertyOptional({ type: Date })
 	@IsDate()
